@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dashboard</title>
+</head>
+<body>
+
+<h2 id="welcome"></h2>
+
+<button onclick="logout()">Logout</button>
+<br><br>
+<a href="profile.html">Go to Profile Settings</a>
+
+<script>
+  const username = localStorage.getItem("username");
+
+  if (!username) {
+    window.location.href = "login.html";
+  } else {
+    document.getElementById("welcome").innerText = `Welcome, ${username}!`;
+  }
+
+  function logout() {
+    localStorage.clear();
+    window.location.href = "login.html";
+  }
+</script>
+
+</body>
+</html>
