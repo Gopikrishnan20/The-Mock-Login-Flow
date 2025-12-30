@@ -4,21 +4,23 @@
   <title>Login</title>
 </head>
 <body>
+<link rel="stylesheet" href="style.css">
 
-<h2>Login</h2>
+<div class="container">
+  <h2>Login</h2>
 
-<input type="text" id="username" placeholder="Username" />
-<br><br>
-<input type="password" id="password" placeholder="Password" />
-<br><br>
-<button onclick="login()">Login</button>
+  <input type="text" id="username" placeholder="Username" />
+  <input type="password" id="password" placeholder="Password" />
+
+  <button onclick="login()">Login</button>
+</div>
 
 <script>
   function login() {
     const username = document.getElementById("username").value;
     const password = document.getElementById("password").value;
 
-    if (username === "admin" && password === "1234") {
+    if (username === "gopi" && password === "123") {
       localStorage.setItem("username", username);
       window.location.href = "dashboard.html";
     } else {
